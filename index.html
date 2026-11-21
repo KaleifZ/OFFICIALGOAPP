@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/icon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <title>GoAnywhere</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brandmark">G</div>
+      <div><div class="eyebrow">YOUR TRAVEL COMPANION</div><h1>GoAnywhere</h1></div>
+      <span class="local-pill">APP PREVIEW</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">ONE SEARCH. EVERY WAY THERE.</p>
+      <h2>Find the smartest way<br>to get there.</h2>
+      <p class="muted">Compare flights, trains, buses and ferries in one itinerary view.</p>
+    </section>
+
+    <section class="panel search-panel">
+      <div class="field-grid">
+        <label>FROM<input id="origin" value="Tampa, Florida" autocomplete="off"></label>
+        <label>TO<input id="destination" value="New York, New York" autocomplete="off"></label>
+        <label>DEPARTURE<input id="date" type="date" value="2027-01-15"></label>
+        <label>SORT BY<select id="sort"><option value="price">Cheapest</option><option value="duration">Shortest journey</option></select></label>
+      </div>
+      <div class="mode-row" id="modes">
+        <label class="mode active"><input type="checkbox" value="Plane" checked><span>✈ Plane</span></label>
+        <label class="mode active"><input type="checkbox" value="Train" checked><span>▰ Train</span></label>
+        <label class="mode active"><input type="checkbox" value="Bus" checked><span>▣ Bus</span></label>
+        <label class="mode active"><input type="checkbox" value="Ferry" checked><span>⌁ Ferry</span></label>
+      </div>
+      <button class="primary" id="searchBtn">Find routes <span>→</span></button>
+      <p class="fineprint">Results appear here inside GoAnywhere. Prices and schedules will be labeled as live or estimated.</p>
+    </section>
+
+    <section class="saved-panel panel">
+      <div class="saved-heading"><div><p class="eyebrow">YOUR PERSONAL COLLECTION</p><h2>Saved trips</h2></div><span class="count">Only saved by you</span></div>
+      <div id="savedTrips" class="saved-list"><p class="empty-saved">You haven't saved any trips yet. Search for a route and tap “Save this trip”.</p></div>
+    </section>
+
+    <section class="results-head">
+      <div><p class="eyebrow">YOUR MATCHES</p><h2>Route results</h2></div>
+      <span id="resultCount" class="count">0 routes</span>
+    </section>
+    <div id="notice" class="notice">
+      <div class="notice-icon">✦</div>
+      <div><strong>Your trip workspace</strong><p>Search for a trip to see routes, connections, journey times and price comparisons here.</p></div>
+    </div>
+    <section id="results" class="results"></section>
+
+    <footer><span>GOANYWHERE</span><span>Plan here · Pay with provider</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
